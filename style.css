@@ -1,0 +1,235 @@
+:root{
+    --deep-blue:  hsl(228, 45%, 44%);
+    --bishop:  hsl(300, 43%, 22%);
+    --dirty-purple: hsl(303, 10%, 53%);
+    --pink: hsl(333, 80%, 67%);
+    --light-gray:  hsl(300, 24%, 96%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section{
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 3em;
+    margin-right: 2em;
+
+}
+
+@media screen and (max-width: 1220px){
+    section{
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+
+/* Upper part styling */
+
+.container-upper{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2em;
+  }
+
+
+.container-upper-heading{
+    width: 40%;
+}
+
+h1{
+    color: var(--bishop);
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.container-upper-heading p{
+    color: var(--dirty-purple);
+    line-height: 1.2em;
+}
+
+.container-upper-stars{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.container-upper-stars .container-upper-stars-review:nth-child(2){
+    align-self: center;
+}
+
+.container-upper-stars .container-upper-stars-review:nth-child(3){
+    align-self: flex-end;
+}
+
+.container-upper-stars-review{
+    background-color: var(--light-gray);
+    width: 80%;
+    padding: 1.2em;
+    font-weight: 700;
+    color: var(--bishop);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8em;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1220px) {
+    .container-upper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-upper-heading {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+    h1{
+        font-size: 2em;
+    }
+    .container-upper-stars{
+        width: 80%;
+        justify-content: center;
+    }
+
+    .container-upper-stars .container-upper-stars-review:nth-child(1){
+        align-self: center;
+    }
+    .container-upper-stars .container-upper-stars-review:nth-child(2){
+        align-self: center;
+    }
+    .container-upper-stars .container-upper-stars-review:nth-child(3){
+        align-self: center;
+    }
+    .container-upper-stars-review{
+        font-size: 1em;
+        text-align: center;
+        flex-direction: column;
+        margin-bottom: 1em;
+        width: 80%;
+    }  
+}
+
+
+/* Bottom part */
+.container-bottom{
+    display: flex;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-bottom-testimony{
+      background-color: var(--bishop);
+      color:  var(--light-gray);
+      width: 32%;
+      height: 32%;
+      line-height: 1.2em;
+      padding: 1.8em 3em;  
+      border-radius: 10px;
+}
+
+.container-bottom .container-bottom-testimony:nth-child(2){
+    align-self: center;
+}
+
+.container-bottom .container-bottom-testimony:nth-child(3){
+    align-self: flex-end;
+}
+ 
+.picture{
+      float: left;
+      border-radius: 50%;
+      margin-right: 1em;
+      margin-bottom: 1.5em;
+}
+
+.name{
+    font-weight: 700;
+}
+
+.buyer{
+    color: var(--pink);
+}
+
+.text{
+      clear: both; /*to prevent from this paragraph to being as well floated to the picture */
+      font-weight: 500;
+}
+
+
+@media screen and (max-width: 1220px) {
+    .container-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        
+    }
+    .container-bottom-testimony {
+        width: 80%;
+        margin-bottom: 2em;;
+    }
+    .container-upper-stars-review div:first-of-type{
+        margin-bottom: 1em;
+    }
+
+    .container-bottom .container-bottom-testimony:nth-child(3){
+        align-self: center;
+    }
+    .picture{
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1.5em;
+  }
+    
+}
+
+/* Pattern settings */
+.pattern{
+    position: absolute;
+    z-index: -1;
+}
+
+.bottom{
+    right: 0px;
+    bottom: 0px;
+}
+
+.ontop{
+    top: 0px;
+    left: 0px;
+}
+
+/* Footer */
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    display: block;
+    margin-top: 3em;
+}
+.attribution a {
+    color: var(--deep-blue);
+}
